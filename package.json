@@ -1,0 +1,25 @@
+{
+  "name": "@gn5r/zenn",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "gn5r",
+    "email": "shangyuan.tuolang@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "preview": "zenn preview",
+    "prepare": "yarn husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "husky": "^8.0.2",
+    "zenn-cli": "^0.1.134"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
