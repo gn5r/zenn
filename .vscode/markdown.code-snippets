@@ -1,0 +1,15 @@
+{
+  "zenn articles template": {
+    "prefix": "article",
+    "body": [
+      "---",
+      "title: \"${1}\"",
+      "emoji: \"\"",
+      "type: \"tech\"",
+      "topics: []",
+      "published: true",
+      "---",
+      ""
+    ]
+  }
+}
