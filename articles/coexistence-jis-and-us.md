@@ -69,6 +69,8 @@ Win + X -> M を押下してデバイスマネージャーを開く
 エンコード を「UTF-16 LE」に変更し保存
 作成した reg ファイルを実行してレジストリを登録する
 
+## regedit で確認する
+
 regedit を開き「HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\\@@@\Device Parameters」に下記キーが登録されていれば OK
 
 - OverrideKeyboardType
