@@ -2,14 +2,14 @@
 title: "Windows 11でJIS/US配列を共存させる"
 emoji: "⚙️"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["windows"]
+topics: ["windows", "windows11"]
 published: true
 ---
 
 JIS 配列と US 配列の共存方法として色々情報がありますが、自分なりの簡単な変更方法を確立したので記事にしました
 ざっくり以下のような流れになります
 
-1. システム配列を「接続済みキーボードレイアウトを使用する」に変更し、レイアウト強制の設定値を削除
+1. システム配列を`接続済みキーボードレイアウトを使用する`に変更し、レイアウト強制の設定値を削除
 2. ノートパソコンに内蔵されているキーボードレイアウトを JIS へ変更する
 3. JIS と US の共存を確認
 
@@ -63,15 +63,15 @@ Win + X -> M を押下してデバイスマネージャーを開く
 
 ![デバイスインスタンスパス](/images/coexistence-jis-and-us/device_instance_path.jpg)
 
-先ほど作成した reg ファイルの「@@@」となっている部分に、コピーしたデバイスインスタンスパスをペーストして下さい
+先ほど作成した reg ファイルの`@@@`となっている部分に、コピーしたデバイスインスタンスパスをペーストして下さい
 (改行が入ってしまった場合は削除)
 
-エンコード を「UTF-16 LE」に変更し保存
+エンコード を`UTF-16 LE`に変更し保存
 作成した reg ファイルを実行してレジストリを登録する
 
 ## regedit で確認する
 
-regedit を開き「HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\\@@@\Device Parameters」に下記キーが登録されていれば OK
+regedit を開き`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\\@@@\Device Parameters`に下記キーが登録されていれば OK
 
 - OverrideKeyboardType
 - OverrideKeyboardSubtype
