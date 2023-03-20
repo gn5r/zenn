@@ -47,9 +47,11 @@ _「接続済みキーボードレイアウトを使用する」をクリック_
 ## reg ファイルを作成する
 
 reg ファイルを新規作成し、下記コードをコピペ
-@@@になっている部分は後ほどコピーするデバイスインスタンスパスへ書き換えます
+`@@@`になっている部分は後ほどコピーするデバイスインスタンスパスへ書き換えます
 
 ```reg:keyboard_layout_to_jis.reg
+Windows Registry Editor Version 5.00
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\@@@\Device Parameters]
 "OverrideKeyboardType"=dword:00000007
 "OverrideKeyboardSubtype"=dword:00000002
@@ -71,11 +73,11 @@ Win + X -> M を押下してデバイスマネージャーを開く
 
 ## regedit で確認する
 
-regedit を開き`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\\@@@\Device Parameters`に下記キーが登録されていれば OK
+regedit を開き`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\@@@\Device Parameters`に下記キーが登録されていれば OK
 
 - OverrideKeyboardType
 - OverrideKeyboardSubtype
 
 レジストリを弄ったため再起動
 
-再起動後、JIS キーボードの半角/全角が機能するか、US キーボードの`が機能するかなどを確認し問題なければ作業完了です。
+再起動後、JIS キーボードの半角/全角が機能するか、US キーボードの`が機能するかなどを確認し問題なければ作業完了です
